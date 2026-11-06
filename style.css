@@ -1,0 +1,1659 @@
+/* ============================================================
+   SignosSemáforo - Estilos CSS (Clean & Clinical Healthcare UI)
+   Contornos Orgánicos y Suaves para Imágenes (Cero Esquinas Cuadradas)
+   Identidad Oficial Universidad de Boyacá + Fondo Clínico Vivo
+   100% Autónomo sin dependencias externas • Optimizado para GitHub Pages
+   ============================================================ */
+
+:root {
+  --primary: #0d9488;
+  --primary-hover: #0f766e;
+  --primary-light: #ccfbf1;
+  --primary-dark: #115e59;
+  
+  /* Paleta de Fondo con Color Clínico Vivo */
+  --bg-gradient-1: #e6f6f4;
+  --bg-gradient-2: #e0f2fe;
+  --bg-gradient-3: #f0fdfa;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --border-color: #cbd5e1;
+  --border-focus: #0d9488;
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-light: #64748b;
+
+  /* Semáforo Clínico */
+  --traffic-green-bg: #dcfce7;
+  --traffic-green-text: #166534;
+  --traffic-green-border: #86efac;
+  --traffic-green-dot: #22c55e;
+
+  --traffic-yellow-bg: #fef9c3;
+  --traffic-yellow-text: #854d0e;
+  --traffic-yellow-border: #fde047;
+  --traffic-yellow-dot: #eab308;
+
+  --traffic-red-bg: #fee2e2;
+  --traffic-red-text: #991b1b;
+  --traffic-red-border: #fca5a5;
+  --traffic-red-dot: #ef4444;
+
+  --traffic-neutral-bg: #f1f5f9;
+  --traffic-neutral-text: #475569;
+  --traffic-neutral-border: #cbd5e1;
+  --traffic-neutral-dot: #94a3b8;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 8px 18px -3px rgba(13, 148, 136, 0.14), 0 4px 8px -3px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 16px 28px -5px rgba(13, 148, 136, 0.18), 0 6px 12px -4px rgba(15, 23, 42, 0.08);
+}
+
+/* ============================================================
+   MODO TURNO NOCTURNO (DARK MODE - ALTO CONTRASTE CLÍNICO)
+   ============================================================ */
+body.dark-mode {
+  --primary: #14b8a6;
+  --primary-hover: #2dd4bf;
+  --primary-light: #134e4a;
+  --primary-dark: #042f2e;
+
+  --bg-gradient-1: #07131e;
+  --bg-gradient-2: #082026;
+  --bg-gradient-3: #0c1a24;
+  --bg-card: rgba(30, 41, 59, 0.94);
+  --border-color: #334155;
+  --border-focus: #14b8a6;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+
+  --traffic-green-bg: #064e3b;
+  --traffic-green-text: #6ee7b7;
+  --traffic-green-border: #059669;
+  --traffic-green-dot: #10b981;
+
+  --traffic-yellow-bg: #451a03;
+  --traffic-yellow-text: #fde047;
+  --traffic-yellow-border: #b45309;
+  --traffic-yellow-dot: #f59e0b;
+
+  --traffic-red-bg: #450a0a;
+  --traffic-red-text: #fca5a5;
+  --traffic-red-border: #b91c1c;
+  --traffic-red-dot: #ef4444;
+
+  --traffic-neutral-bg: #1e293b;
+  --traffic-neutral-text: #cbd5e1;
+  --traffic-neutral-border: #475569;
+  --traffic-neutral-dot: #64748b;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 18px -3px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 28px -5px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ============================================================
+   FONDO CON COLOR MÉDICO VIVO Y RADIAL MESH
+   ============================================================ */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-gradient-1);
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(13, 148, 136, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 90% 12%, rgba(2, 132, 199, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.10) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.10) 0%, transparent 40%),
+    radial-gradient(circle at 15% 90%, rgba(16, 185, 129, 0.14) 0%, transparent 45%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text-main);
+  line-height: 1.5;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  position: relative;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(13, 148, 136, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(2, 132, 199, 0.20) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+}
+
+/* ============================================================
+   BANNER SUPERIOR: CONTORNOS SUAVES Y BÚHO CIRCULAR
+   ============================================================ */
+.university-top-banner {
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 14px 22px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+body.dark-mode .university-top-banner {
+  background: #ffffff;
+  border-color: #475569;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.uniboyaca-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.uniboyaca-logo-wrap {
+  display: flex;
+  align-items: center;
+  max-width: 380px;
+  height: 56px;
+  padding: 2px 4px;
+}
+
+.uniboyaca-official-logo {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Contorno Orgánico Circular para el Búho */
+.uniboyaca-buho-wrap {
+  width: 62px;
+  height: 62px;
+  min-width: 62px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  padding: 6px;
+  border: 2px solid #e11d48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.18);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.uniboyaca-buho-wrap:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 6px 16px rgba(225, 29, 72, 0.28);
+}
+
+.uniboyaca-buho-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+
+.uniboyaca-badge-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 6px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.campus-badge {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid #cbd5e1;
+}
+
+.accreditation-pill {
+  background: #fef2f2;
+  color: #991b1b;
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid #fecaca;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 520px) {
+  .uniboyaca-brand-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .uniboyaca-logo-wrap {
+    max-width: 290px;
+    height: 48px;
+  }
+  .uniboyaca-buho-wrap {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+  }
+  .uniboyaca-badge-group {
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   NOTIFICACIÓN FLOTANTE (TOAST)
+   ============================================================ */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  max-width: 480px;
+}
+
+.toast {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transform: translateY(-30px) scale(0.95);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(10px);
+}
+
+.toast.toast-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.toast.toast-success {
+  background: #064e3b;
+  border-color: #34d399;
+  color: #ecfdf5;
+}
+
+.toast.toast-error {
+  background: #7f1d1d;
+  border-color: #f87171;
+  color: #fef2f2;
+}
+
+.toast-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+}
+
+body.dark-mode .toast {
+  background: #1e293b;
+  border-color: #38bdf8;
+  color: #f0f9ff;
+}
+
+/* ============================================================
+   BOTÓN FLOTANTE: TURNO NOCTURNO
+   ============================================================ */
+.btn-floating-night {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #0f766e;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-floating-night:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.btn-floating-night:active {
+  transform: translateY(0);
+}
+
+.night-icon-wrap svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+body.dark-mode .btn-floating-night {
+  background: #1e293b;
+  color: #fde047;
+  border-color: #475569;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 520px) {
+  .night-label {
+    display: none;
+  }
+  .btn-floating-night {
+    padding: 10px;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.app-container {
+  width: 100%;
+  max-width: 740px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 40px;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   Header Institucional con Búho
+   ============================================================ */
+.app-header {
+  background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
+  color: #ffffff;
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+body.dark-mode .app-header {
+  background: linear-gradient(135deg, #042f2e 0%, #0f766e 60%, #115e59 100%);
+  border: 1px solid #134e4a;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-right: 48px;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.mini-buho-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.mode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #0f766e;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.header-main-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Contenedor Circular Suave para el Búho Principal */
+.header-hero-img-wrap {
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 65%, #f0fdfa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  padding: 8px;
+  transition: transform 0.25s ease;
+}
+
+.header-hero-img-wrap:hover {
+  transform: scale(1.06);
+}
+
+.header-hero-buho {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.header-titles h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.header-titles .subtitle {
+  font-size: 0.9rem;
+  opacity: 0.94;
+  margin-top: 4px;
+}
+
+.student-info-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  color: #f0fdfa;
+}
+
+@media (min-width: 600px) {
+  .student-info-strip {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.practice-data {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dot-separator {
+  opacity: 0.6;
+}
+
+/* ============================================================
+   Barra de Ajustes / Casos Rápidos
+   ============================================================ */
+.settings-bar {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+@media (min-width: 620px) {
+  .settings-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.setting-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+}
+
+.select-chip {
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1.5px solid var(--border-color);
+  border-radius: 9999px; /* Chip redondeado orgánico */
+  background-color: #ffffff;
+  color: var(--text-main);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+body.dark-mode .select-chip {
+  background-color: #0f172a;
+}
+
+.select-chip:focus {
+  border-color: var(--primary);
+}
+
+.quick-cases {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.quick-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.btn-chip {
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .btn-chip {
+  background: #1e293b;
+}
+
+.btn-chip:hover {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--primary);
+}
+
+.btn-chip.chip-warn:hover {
+  background: var(--traffic-yellow-bg);
+  color: var(--traffic-yellow-text);
+  border-color: var(--traffic-yellow-border);
+}
+
+.btn-chip.chip-danger:hover {
+  background: var(--traffic-red-bg);
+  color: var(--traffic-red-text);
+  border-color: var(--traffic-red-border);
+}
+
+/* ============================================================
+   Banner de Alerta Global
+   ============================================================ */
+.status-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border-left: 6px solid var(--traffic-neutral-dot);
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.banner-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--traffic-neutral-bg);
+  color: var(--traffic-neutral-text);
+}
+
+.banner-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.banner-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.banner-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Estados del Banner Global */
+.status-banner.banner-green {
+  background: var(--traffic-green-bg);
+  border-color: var(--traffic-green-border);
+  border-left-color: var(--traffic-green-dot);
+}
+.status-banner.banner-green .banner-icon {
+  background: var(--traffic-green-dot);
+  color: #ffffff;
+}
+.status-banner.banner-green .banner-title {
+  color: var(--traffic-green-text);
+}
+.status-banner.banner-green .banner-desc {
+  color: var(--traffic-green-text);
+}
+
+.status-banner.banner-yellow {
+  background: var(--traffic-yellow-bg);
+  border-color: var(--traffic-yellow-border);
+  border-left-color: var(--traffic-yellow-dot);
+}
+.status-banner.banner-yellow .banner-icon {
+  background: var(--traffic-yellow-dot);
+  color: #ffffff;
+}
+.status-banner.banner-yellow .banner-title {
+  color: var(--traffic-yellow-text);
+}
+.status-banner.banner-yellow .banner-desc {
+  color: var(--traffic-yellow-text);
+}
+
+.status-banner.banner-red {
+  background: var(--traffic-red-bg);
+  border-color: var(--traffic-red-border);
+  border-left-color: var(--traffic-red-dot);
+  animation: pulse-red 2s infinite ease-in-out;
+}
+.status-banner.banner-red .banner-icon {
+  background: var(--traffic-red-dot);
+  color: #ffffff;
+}
+.status-banner.banner-red .banner-title {
+  color: var(--traffic-red-text);
+}
+.status-banner.banner-red .banner-desc {
+  color: var(--traffic-red-text);
+  font-weight: 600;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* ============================================================
+   Tarjetas de Signos Vitales con Contornos Circulares Suaves
+   ============================================================ */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vital-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vital-card:focus-within {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* BORDES DINÁMICOS SEGÚN SEMÁFORO Y ERRORES */
+.vital-card.card-border-green {
+  border-color: var(--traffic-green-dot) !important;
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.25);
+}
+
+.vital-card.card-border-yellow {
+  border-color: var(--traffic-yellow-dot) !important;
+  box-shadow: 0 6px 18px rgba(234, 179, 8, 0.28);
+}
+
+.vital-card.card-border-red {
+  border-color: var(--traffic-red-dot) !important;
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.35);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.vital-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ============================================================
+   CONTORNOS CIRCULARES SUAVES PARA IMÁGENES DE SIGNOS VITALES
+   (CERO ESQUINAS CUADRADAS)
+   ============================================================ */
+.vital-img-container {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%; /* Contorno circular suave y orgánico */
+  background: radial-gradient(circle, #ffffff 60%, #f8fafc 100%);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: 2px solid var(--border-color);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+/* Tinte suave para cada signo vital */
+#card-pa .vital-img-container {
+  background: radial-gradient(circle, #ffffff 60%, #fee2e2 100%);
+  border-color: #fca5a5;
+}
+#card-fc .vital-img-container {
+  background: radial-gradient(circle, #ffffff 60%, #fce7f3 100%);
+  border-color: #f472b6;
+}
+#card-fr .vital-img-container {
+  background: radial-gradient(circle, #ffffff 60%, #e0f2fe 100%);
+  border-color: #7dd3fc;
+}
+#card-temp .vital-img-container {
+  background: radial-gradient(circle, #ffffff 60%, #ffedd5 100%);
+  border-color: #fdba74;
+}
+#card-spo2 .vital-img-container {
+  background: radial-gradient(circle, #ffffff 60%, #ccfbf1 100%);
+  border-color: #5eead4;
+}
+
+body.dark-mode .vital-img-container {
+  background: #0f172a !important;
+}
+
+.vital-card:hover .vital-img-container {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.14);
+}
+
+.vital-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.08));
+}
+
+.vital-title-wrap h2 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.vital-unit {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+/* Badges de Semáforo */
+.traffic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.traffic-light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.badge-neutral {
+  background: var(--traffic-neutral-bg);
+  color: var(--traffic-neutral-text);
+  border-color: var(--traffic-neutral-border);
+}
+.badge-neutral .traffic-light { background: var(--traffic-neutral-dot); }
+
+.badge-green {
+  background: var(--traffic-green-bg);
+  color: var(--traffic-green-text);
+  border-color: var(--traffic-green-border);
+}
+.badge-green .traffic-light { background: var(--traffic-green-dot); }
+
+.badge-yellow {
+  background: var(--traffic-yellow-bg);
+  color: var(--traffic-yellow-text);
+  border-color: var(--traffic-yellow-border);
+}
+.badge-yellow .traffic-light { background: var(--traffic-yellow-dot); }
+
+.badge-red {
+  background: var(--traffic-red-bg);
+  color: var(--traffic-red-text);
+  border-color: var(--traffic-red-border);
+}
+.badge-red .traffic-light { background: var(--traffic-red-dot); }
+
+/* Inputs */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dual-inputs {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.divider-slash {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: var(--text-light);
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.input-with-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-unit input {
+  width: 100%;
+  padding: 12px 52px 12px 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+body.dark-mode .input-with-unit input {
+  background: #0f172a;
+}
+
+.input-with-unit input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3.5px rgba(13, 148, 136, 0.22);
+}
+
+body.dark-mode .input-with-unit input:focus {
+  box-shadow: 0 0 0 3.5px rgba(20, 184, 166, 0.3);
+}
+
+.unit-tag {
+  position: absolute;
+  right: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* ============================================================
+   MENSAJES DE ERROR DE VALIDACIÓN Y SEGURIDAD CLÍNICA
+   ============================================================ */
+.field-error {
+  display: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1.5px solid #f87171;
+  line-height: 1.4;
+  animation: shake-error 0.25s ease-in-out;
+}
+
+body.dark-mode .field-error {
+  background-color: #450a0a;
+  color: #fecaca;
+  border-color: #ef4444;
+}
+
+.field-error.show {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@keyframes shake-error {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+/* ============================================================
+   CÁLCULO AUTOMÁTICO DE PAM (PRESIÓN ARTERIAL MEDIA)
+   ============================================================ */
+.pam-card {
+  background: rgba(241, 245, 249, 0.7);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .pam-card {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.pam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pam-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pam-chip {
+  font-size: 0.68rem;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  background: var(--traffic-neutral-bg);
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.pam-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.pam-result-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pam-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.pam-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+
+.pam-alert-box {
+  background: #fee2e2;
+  border: 1px solid #f87171;
+  color: #991b1b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: pulse-red 2s infinite ease-in-out;
+}
+
+body.dark-mode .pam-alert-box {
+  background: #500724;
+  border-color: #f43f5e;
+  color: #fecdd3;
+}
+
+/* Feedback Clínico */
+.clinical-feedback {
+  font-size: 0.86rem;
+  min-height: 20px;
+  display: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.clinical-feedback.show {
+  display: block;
+}
+
+.clinical-feedback.fb-green {
+  background: var(--traffic-green-bg);
+  color: var(--traffic-green-text);
+}
+.clinical-feedback.fb-yellow {
+  background: var(--traffic-yellow-bg);
+  color: var(--traffic-yellow-text);
+}
+.clinical-feedback.fb-red {
+  background: var(--traffic-red-bg);
+  color: var(--traffic-red-text);
+}
+
+/* Caja de Referencia Fisiológica */
+.reference-box {
+  background: rgba(248, 250, 252, 0.7);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+body.dark-mode .reference-box {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.ref-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ref-ranges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ref-tag {
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.tag-green { background: var(--traffic-green-bg); color: var(--traffic-green-text); }
+.tag-yellow { background: var(--traffic-yellow-bg); color: var(--traffic-yellow-text); }
+.tag-red { background: var(--traffic-red-bg); color: var(--traffic-red-text); }
+
+/* Botones de Acción */
+.form-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+@media (min-width: 500px) {
+  .form-actions {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 9999px; /* Botones redondeados orgánicos */
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  color: var(--text-muted);
+  border: 1.5px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: #0f172a;
+}
+
+/* ============================================================
+   Sección de Reporte para Nota de Enfermería (SOAPIE)
+   ============================================================ */
+.report-section {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-color);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.report-header-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Contorno Circular para el Kardex */
+.report-img-container {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%; /* Contorno circular suave */
+  background: radial-gradient(circle, #ffffff 60%, #e0f2fe 100%);
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.12);
+  border: 2px solid #7dd3fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode .report-img-container {
+  background: #0f172a;
+  border-color: #38bdf8;
+}
+
+.report-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.report-header-title h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.report-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.text-teal {
+  color: var(--primary);
+}
+
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary-light);
+  border: 1.5px solid var(--primary);
+  color: var(--primary-dark);
+  padding: 9px 18px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+body.dark-mode .btn-copy {
+  background: #134e4a;
+  color: #5eead4;
+  border-color: #14b8a6;
+}
+
+.btn-copy:hover {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+}
+
+/* Banner de confirmación visual de copiado en la propia sección */
+.copy-success-banner {
+  background: #dcfce7;
+  border: 1.5px solid #86efac;
+  color: #166534;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.25s ease;
+}
+
+.copy-success-banner svg {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  stroke: #166534;
+}
+
+body.dark-mode .copy-success-banner {
+  background: #064e3b;
+  border-color: #059669;
+  color: #a7f3d0;
+}
+
+body.dark-mode .copy-success-banner svg {
+  stroke: #a7f3d0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.report-box-wrap textarea {
+  width: 100%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.88rem;
+  background: #ffffff;
+  color: var(--text-main);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+body.dark-mode .report-box-wrap textarea {
+  background: #0f172a;
+}
+
+.report-box-wrap textarea:focus {
+  border-color: var(--primary);
+}
+
+.report-guidance {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   Guía de Conducta según Semáforo con Ilustración Orgánica
+   ============================================================ */
+.clinical-conduct-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.conduct-header-with-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.conduct-header-with-img h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.conduct-subtitle {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+/* Contorno Suave para el Semáforo de Triage */
+.triage-badge-img {
+  width: 74px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 9999px; /* Pill orgánica */
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+body.dark-mode .triage-badge-img {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid #334155;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.conduct-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .conduct-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.conduct-item {
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 4.5px solid;
+}
+
+.conduct-item.item-green {
+  background: var(--traffic-green-bg);
+  border-left-color: var(--traffic-green-dot);
+}
+.conduct-item.item-yellow {
+  background: var(--traffic-yellow-bg);
+  border-left-color: var(--traffic-yellow-dot);
+}
+.conduct-item.item-red {
+  background: var(--traffic-red-bg);
+  border-left-color: var(--traffic-red-dot);
+}
+
+.conduct-pill {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.green-pill { color: var(--traffic-green-text); }
+.yellow-pill { color: var(--traffic-yellow-text); }
+.red-pill { color: var(--traffic-red-text); }
+
+.conduct-item p {
+  font-size: 0.78rem;
+  color: var(--text-main);
+  line-height: 1.45;
+}
+
+/* ============================================================
+   Footer y Legal con Búho Oficial Circular
+   ============================================================ */
+.app-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.legal-box {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.legal-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.legal-box ul {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legal-box strong {
+  color: var(--text-main);
+}
+
+.footer-institutional-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Búho Circular en el Footer */
+.footer-buho-img {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  object-fit: contain;
+  background: radial-gradient(circle, #ffffff 60%, #fef2f2 100%);
+  border-radius: 50%; /* Cero esquinas cuadradas */
+  padding: 4px;
+  border: 2px solid #e11d48;
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.16);
+}
+
+.footer-text p {
+  font-size: 0.78rem;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.credits {
+  font-size: 0.74rem;
+  color: var(--text-light);
+  line-height: 1.4;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 8px;
+}
+
+body.dark-mode .credits {
+  border-top-color: #334155;
+}
+
+/* Iconos SVG auxiliares */
+.icon-brand { width: 18px; height: 18px; }
+.icon-sm { width: 18px; height: 18px; }
+.icon-mini { width: 14px; height: 14px; min-width: 14px; }

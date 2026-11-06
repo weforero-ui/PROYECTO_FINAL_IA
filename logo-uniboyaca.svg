@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ubRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="50%" stop-color="#be123c" />
+      <stop offset="100%" stop-color="#9f1239" />
+    </linearGradient>
+    <filter id="ubDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- ISOTIPO: EL BÚHO INSTITUCIONAL DE LA SABIDURÍA -->
+  <g transform="translate(10, 8)" filter="url(#ubDropShadow)">
+    <!-- Base Shield / Crest -->
+    <path d="M42 4 C62 4 78 14 80 38 C80 62 60 76 42 82 C24 76 4 62 4 38 C6 14 22 4 42 4 Z" 
+          fill="url(#ubRedGrad)" stroke="#881337" stroke-width="2"/>
+    
+    <!-- Inner White Contour -->
+    <path d="M42 9 C58 9 72 17 74 38 C74 58 56 69 42 75 C28 69 10 58 10 38 C12 17 26 9 42 9 Z" 
+          fill="none" stroke="#ffffff" stroke-width="1.8" stroke-dasharray="3 2" opacity="0.85"/>
+
+    <!-- The Owl (Búho) Head & Ears -->
+    <path d="M22 24 L30 18 L38 24 L46 24 L54 18 L62 24 C62 36 60 48 56 56 C50 64 42 66 42 66 C42 66 34 64 28 56 C24 48 22 36 22 24 Z" 
+          fill="#ffffff"/>
+
+    <!-- Owl Brow & Facial Disc in Institutional Red -->
+    <path d="M25 27 C30 25 36 28 41 33 C40 37 36 40 31 39 C26 38 23 33 25 27 Z" fill="#9f1239"/>
+    <path d="M59 27 C54 25 48 28 43 33 C44 37 48 40 53 39 C58 38 61 33 59 27 Z" fill="#9f1239"/>
+
+    <!-- Big Attentive Owl Eyes (Sabiduría) -->
+    <circle cx="33" cy="33" r="6" fill="#facc15" stroke="#713f12" stroke-width="1"/>
+    <circle cx="33" cy="33" r="3" fill="#0f172a"/>
+    <circle cx="31.5" cy="31.5" r="1.2" fill="#ffffff"/>
+
+    <circle cx="51" cy="33" r="6" fill="#facc15" stroke="#713f12" stroke-width="1"/>
+    <circle cx="51" cy="33" r="3" fill="#0f172a"/>
+    <circle cx="49.5" cy="31.5" r="1.2" fill="#ffffff"/>
+
+    <!-- Sharp Beak -->
+    <polygon points="42,35 39,43 45,43" fill="#d97706"/>
+
+    <!-- Feathered Breast / Book Pattern (Saber y Hacer) -->
+    <path d="M34 48 Q42 52 50 48" fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round"/>
+    <path d="M36 54 Q42 58 48 54" fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round"/>
+    <path d="M38 60 Q42 63 46 60" fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Academic Open Book Base -->
+    <path d="M26 68 C34 65 42 67 42 70 C42 67 50 65 58 68 L56 73 C49 70 42 72 42 74 C42 72 35 70 28 73 Z" 
+          fill="#fef08a" stroke="#ca8a04" stroke-width="0.8"/>
+  </g>
+
+  <!-- LOGOTIPO TIPOGRÁFICO INSTITUCIONAL -->
+  <!-- "Universidad de" -->
+  <text x="106" y="38" 
+        font-family="'Times New Roman', 'Palatino Linotype', 'Book Antiqua', Georgia, serif" 
+        font-size="21" 
+        font-weight="bold" 
+        letter-spacing="0.5" 
+        fill="#9f1239">
+    Universidad de
+  </text>
+
+  <!-- "Boyacá" -->
+  <text x="106" y="66" 
+        font-family="'Times New Roman', 'Palatino Linotype', 'Book Antiqua', Georgia, serif" 
+        font-size="32" 
+        font-weight="bold" 
+        letter-spacing="1" 
+        fill="#1e293b">
+    Boyacá
+  </text>
+
+  <!-- Lema / Institución -->
+  <line x1="106" y1="74" x2="395" y2="74" stroke="#e11d48" stroke-width="2" stroke-linecap="round"/>
+
+  <text x="106" y="86" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="9" 
+        font-weight="700" 
+        letter-spacing="1.2" 
+        fill="#64748b">
+    FACULTAD DE CIENCIAS DE LA SALUD • ENFERMERÍA
+  </text>
+</svg>

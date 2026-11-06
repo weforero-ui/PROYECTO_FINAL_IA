@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cuffGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <linearGradient id="dialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+  </defs>
+  <!-- Blood Pressure Cuff -->
+  <rect x="8" y="44" width="46" height="42" rx="6" fill="url(#cuffGrad)" stroke="#991b1b" stroke-width="2"/>
+  <rect x="14" y="50" width="34" height="6" rx="2" fill="#ffffff" fill-opacity="0.3"/>
+  <rect x="14" y="60" width="34" height="6" rx="2" fill="#ffffff" fill-opacity="0.3"/>
+  <!-- Tube from cuff to manometer -->
+  <path d="M42 65 C55 65 52 50 62 48" fill="none" stroke="#64748b" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Manometer Gauge Dial -->
+  <circle cx="70" cy="40" r="24" fill="#334155" stroke="#1e293b" stroke-width="2.5"/>
+  <circle cx="70" cy="40" r="21" fill="url(#dialGrad)"/>
+  <!-- Gauge Marks -->
+  <circle cx="70" cy="40" r="18" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2 3"/>
+  <!-- Colored Zones on Dial -->
+  <path d="M57 32 A16 16 0 0 1 78 26" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <path d="M78 26 A16 16 0 0 1 85 36" fill="none" stroke="#eab308" stroke-width="2.5"/>
+  <path d="M85 36 A16 16 0 0 1 85 46" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <!-- Needle Indicator -->
+  <line x1="70" y1="40" x2="78" y2="30" stroke="#b91c1c" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="70" cy="40" r="3" fill="#0f172a"/>
+  <!-- Pressure label -->
+  <text x="70" y="52" font-size="5" font-family="sans-serif" font-weight="bold" fill="#64748b" text-anchor="middle">mmHg</text>
+  <!-- Inflation Bulb -->
+  <path d="M30 86 C30 92 38 96 38 92 C38 88 34 86 30 86 Z" fill="#475569"/>
+</svg>

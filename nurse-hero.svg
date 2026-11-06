@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nurseBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f0fdfa" />
+    </linearGradient>
+    <filter id="nurseShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f766e" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Background Circle with Glow -->
+  <circle cx="80" cy="80" r="74" fill="url(#nurseBg)" filter="url(#nurseShadow)" />
+  <circle cx="80" cy="80" r="66" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="4 3" />
+  
+  <!-- Medical Shield -->
+  <path d="M80 26 C104 26 118 36 118 64 C118 94 95 116 80 126 C65 116 42 94 42 64 C42 36 56 26 80 26 Z" fill="url(#shieldGrad)" />
+  
+  <!-- Red/Teal Medical Cross -->
+  <path d="M72 46 h16 v16 h16 v16 h-16 v16 h-16 v-16 h-16 v-16 h16 z" fill="#0d9488" />
+  
+  <!-- Stethoscope overlay -->
+  <path d="M56 56 C56 82 70 94 80 94 C90 94 104 82 104 56" fill="none" stroke="#0f766e" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Stethoscope Bell -->
+  <circle cx="80" cy="106" r="9" fill="#14b8a6" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="80" cy="106" r="4" fill="#ffffff"/>
+  <!-- Stethoscope Ear Tubes -->
+  <path d="M56 56 L50 48" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M104 56 L110 48" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Stars / Sparkles of care -->
+  <circle cx="36" cy="40" r="3.5" fill="#fef08a"/>
+  <circle cx="124" cy="40" r="3.5" fill="#fef08a"/>
+</svg>

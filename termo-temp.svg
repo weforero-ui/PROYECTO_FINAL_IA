@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mercuryGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="60%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="42" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <!-- Thermometer Glass Stem -->
+  <rect x="44" y="16" width="12" height="52" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <!-- Thermometer Bulb Base -->
+  <circle cx="50" cy="72" r="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <!-- Mercury Reservoir Bulb -->
+  <circle cx="50" cy="72" r="10" fill="url(#mercuryGrad)"/>
+  <!-- Mercury Liquid Column -->
+  <rect x="47" y="32" width="6" height="36" rx="3" fill="url(#mercuryGrad)"/>
+  <!-- Degree Markings -->
+  <line x1="58" y1="24" x2="64" y2="24" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="58" y1="30" x2="67" y2="30" stroke="#f97316" stroke-width="2"/> <!-- 38°C mark -->
+  <line x1="58" y1="36" x2="64" y2="36" stroke="#22c55e" stroke-width="1.5"/> <!-- 37°C norm -->
+  <line x1="58" y1="42" x2="67" y2="42" stroke="#22c55e" stroke-width="2"/> <!-- 36.5°C -->
+  <line x1="58" y1="48" x2="64" y2="48" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Temperature Symbol -->
+  <text x="32" y="34" font-size="9" font-family="sans-serif" font-weight="bold" fill="#ea580c">°C</text>
+  <!-- Sun / warmth radiation -->
+  <path d="M72 18 L76 14" stroke="#f97316" stroke-width="2" stroke-linecap="round"/>
+  <path d="M78 26 L84 26" stroke="#f97316" stroke-width="2" stroke-linecap="round"/>
+  <path d="M74 34 L79 37" stroke="#f97316" stroke-width="2" stroke-linecap="round"/>
+</svg>
